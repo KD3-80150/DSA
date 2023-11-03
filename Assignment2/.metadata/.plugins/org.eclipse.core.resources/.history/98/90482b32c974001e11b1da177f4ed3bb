@@ -1,0 +1,33 @@
+package com.sunbeam;
+
+import java.util.Arrays;
+
+public class EmployeeSort {
+	static int count;
+	public static void selectionSortEmployee(Employee[] emp, int N) 
+	{
+		for (int i = 0; i < N-1; i++) 
+		{
+			for (int j = i+1; j < N; j++) 
+			{
+				if (emp[i]>emp[j])
+				{
+					count++;
+					int temp = emp[i];
+					emp[i] = emp[j];
+					emp[j] = temp;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+	
+		int emp[] = {44,11,55,22,66,33}; 
+		System.out.println("empay before sort : " + empays.toString(emp));
+		selectionSortEmployee(emp, emp.length);
+		System.out.println("empay after sort : " + empays.toString(emp));
+		System.out.println("No of Comparisions : "+count);
+	}
+
+}

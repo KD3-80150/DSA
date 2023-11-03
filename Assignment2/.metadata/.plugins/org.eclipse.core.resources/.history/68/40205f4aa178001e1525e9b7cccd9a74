@@ -1,0 +1,30 @@
+package com.sunbeam;
+
+public class LinearQueue 
+{
+
+public class QueueMain {
+    public static void main(String[] args) {
+        Queue queue = new Queue(5);
+
+        System.out.println("Is the queue empty? " + queue.isEmpty());
+
+        queue.push(10);
+        queue.push(20);
+        queue.push(30);
+        queue.push(40);
+        queue.push(50);
+        System.out.print("Queue elements: ");
+        queue.printQueue();
+
+        System.out.println("Front of the queue: " + queue.peek());
+        System.out.println("Is the queue full? " + queue.isFull());
+
+        queue.pop();
+        queue.pop();
+
+        System.out.print("Queue elements: ");
+        queue.printQueue();
+        System.out.println("Front of the queue: " + queue.peek());
+    }
+}

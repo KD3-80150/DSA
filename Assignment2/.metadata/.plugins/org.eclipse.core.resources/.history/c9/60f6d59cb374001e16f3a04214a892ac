@@ -1,0 +1,11 @@
+//1. Write a selection sort function to sort array and returns no of 
+//comparisions.
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

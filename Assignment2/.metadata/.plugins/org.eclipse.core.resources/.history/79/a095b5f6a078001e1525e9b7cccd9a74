@@ -1,0 +1,105 @@
+package com.sunbeam;
+
+public class LinearQueue 
+{
+	
+		private int maxSize;
+	    private int[] queueArray;
+	    private int front;
+	    private int rear;
+	    private int currentSize;
+
+	    public LinearQueue(int size) {
+	        maxSize = size;
+	        queueArray = new int[maxSize];
+	        front = 0;
+	        rear = 0;
+	        currentSize = 0;
+	    }
+
+	    public boolean isEmpty() {
+	        return currentSize == 0;
+	    }
+
+	    public boolean isFull() {
+	        return currentSize == maxSize;
+	    }
+
+	    public int size() {
+	        return currentSize;
+	    }
+
+	    public void enqueue(int item) {
+	        if (!isFull()) {
+	            queueArray[rear] = item;
+	            rear = (rear + 1) % maxSize;
+	            currentSize++;
+	            System.out.println("Enqueued: " + item);
+	        } else {
+	            System.out.println("Queue is full. Cannot enqueue " + item);
+	        }
+		
+	}
+	    
+	    public int dequeue() {
+	        if (!isEmpty()) {
+	            int item = queueArray[front];
+	            front = (front + 1) % maxSize;
+	            currentSize--;
+	            System.out.println("Dequeued: " + item);
+	            return item;
+	        } else {
+	            System.out.println("Queue is empty. Cannot dequeue.");
+	            return -1; // Return a sentinel value to indicate an empty queue
+	        }
+	    }
+
+	    public int peek() {
+	        if (!isEmpty()) {
+	            return queueArray[front];
+	        } else {
+	            System.out.println("Queue is empty. Cannot peek.");
+	            return -1; // Return a sentinel value to indicate an empty queue
+	        }
+	    }
+
+	    public void printQueue() {
+	        int current = front;
+	        for (int i = 0; i < currentSize; i++) {
+	            System.out.print(queueArray[current] + " ");
+	            current = (current + 1) % maxSize;
+	        }
+	        System.out.println();
+	    }
+	    
+
+    public static void main(String[] args) {
+    	
+    
+        LinearQueue queue = new LinearQueue(5);
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+
+        System.out.print("Queue elements: ");
+        queue.printQueue();
+        
+        System.out.println("Front of the queue: " + queue.peek());
+        System.out.println("Queue size: " + queue.size());
+
+        queue.dequeue();
+        queue.dequeue();
+
+        System.out.println("Front of the queue: " + queue.peek());
+        System.out.println("Queue size: " + queue.size());
+        
+        
+        System.out.print("Queue elements: ");
+        queue.printQueue();
+        
+        
+    
+}
+}

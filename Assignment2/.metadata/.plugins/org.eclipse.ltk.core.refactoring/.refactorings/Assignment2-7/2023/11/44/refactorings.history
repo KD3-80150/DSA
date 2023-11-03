@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.sunbeam.LinearQueue.java&apos; to &apos;QueueMain.java&apos;&#x0A;- Original project: &apos;Assignment2-7&apos;&#x0A;- Original element: &apos;com.sunbeam.LinearQueue.java&apos;&#x0A;- Renamed element: &apos;com.sunbeam.QueueMain.java&apos;" description="Rename compilation unit &apos;LinearQueue.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.sunbeam{LinearQueue.java" name="QueueMain.java" references="false" stamp="1698834462821" version="1.0"/>
+</session>
